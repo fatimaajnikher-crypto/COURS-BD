@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours Complet - DATA QUEST</title>
+    <link rel="stylesheet" href="home-style.css">
+    <link rel="stylesheet" href="courses-style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="courses-header">
+        <div class="header-content">
+            <a href="index.html" class="back-button">← Retour</a>
+            <h1 class="main-title">COURS COMPLET : BASES DE DONNÉES</h1>
+            <p class="subtitle">Du conceptuel à l'implémentation SQL</p>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="courses-main">
+        <div class="container">
+            <!-- Video Section -->
+            <h2>🎥 Vidéo explicative du cours</h2>
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/mfbTF_Cu0Ss" title="Cours Base de Données - MERISE et SQL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <!-- Course Content -->
+            <section class="course-details">
+                <!-- Table of Contents -->
+                <div class="toc-section">
+                    <h2> Table des matières</h2>
+                    <nav class="toc-nav">
+                        <ul>
+                            <li><a href="#intro"> Introduction générale</a></li>
+                            <li><a href="#contexte"> Contexte mondial et Igoudars</a></li>
+                            <li><a href="#batisseurs">Les Bâtisseurs d'Empires</a></li>
+                            <li><a href="#chap1">  Fondations Théoriques</a></li>
+                            <li><a href="#fondamentaux"> Fondamentaux conceptuels</a></li>
+                            <li><a href="#modelisation"> Modélisation conceptuelle</a></li>
+                            <li><a href="#sql"> SQL et manipulation des données</a></li>
+                            <li><a href="#avance"> Techniques avancées</a></li>
+                            <li><a href="#nosql">  NoSQL</a></li>
+                            <li><a href="#pratique"> Application pratique</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Introduction générale -->
+                <div id="intro" class="module">
+                    <div class="module-header">
+                        <h2>📍  0 . INTRODUCTION ET CONTEXTE</h2>
+                        <span class="module-level">Fondamentaux</span>
+                    </div>
+                    <div class="module-content">
+                        <h3>À l'ère du numérique</h3>
+                        <p>Les données sont devenues la nouvelle monnaie d'échange. Les géants technologiques (Google, Amazon, Facebook, Apple, Microsoft) ont bâti leur empire sur la collecte, l'analyse et la monétisation des données. Une base de données bien conçue est le cœur battant de toute application moderne.</p>
+                        
+                        <h4>💡 Pourquoi étudier les bases de données ?</h4>
+                        <ul class="content-list">
+                            <li><strong>Demande professionnelle</strong> : Compétence indispensable pour tout développeur</li>
+                            <li><strong>Efficacité</strong> : Gérer des millions d'enregistrements efficacement</li>
+                            <li><strong>Sécurité</strong> : Protéger les données sensibles</li>
+                            <li><strong>Intégrité</strong> : Garantir la cohérence des données</li>
+                            <li><strong>Analytique</strong> : Transformer les données en insights exploitables</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contexte Igoudars -->
+                <div id="contexte" class="module">
+                    <div class="module-header">
+                        <h2>🌍 1 . Contexte - Les Igoudars du Souss Massa</h2>
+                        <span class="module-level">Fondamentaux</span>
+                    </div>
+                    <div class="module-content">
+                        <h3>Organisation traditionnelle de l'information</h3>
+                        <p>Les Igoudars sont des greniers collectifs du Maroc qui démontrent que l'organisation structurée des données existe depuis des millénaires, bien avant l'informatique.</p>
+                        
+                        <h4>🔗 Analogie avec les bases de données modernes :</h4>
+                        <div class="code-block">
+                            <code>
+Igoudars (conseils traditionnels) = SGBD (Système de Gestion)<br>
+Archives familiales/tribales = Tables de données<br>
+Système oral/écrit traditionnel = Modèle de données<br>
+Règles coutumières = Contraintes d'intégrité<br>
+Transmission intergénérationnelle = Backup/Archivage
+                            </code>
+                        </div>
+
+                        <h4>✅ Leçons à retenir</h4>
+                        <ul class="content-list">
+                            <li>L'organisation de l'information est un besoin humain fondamental</li>
+                            <li>Les systèmes traditionnels avaient déjà des règles d'intégrité</li>
+                            <li>La sécurité et l'accès contrôlé existaient dans les systèmes ancestraux</li>
+                            <li>La modélisation conceptuelle précède toujours l'implémentation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Les Bâtisseurs d'Empires -->
+                <div id="batisseurs" class="module">
+                    <div class="module-header">
+                        <h2>💰 2 . Les Bâtisseurs d'Empires (Impact Économique)</h2>
+                        <span class="module-level">Contexte</span>
+                    </div>
+                    <div class="module-content">
+                        <h3>La donnée n'est pas qu'un concept technique...</h3>
+                        <p>La donnée n'est pas qu'un concept technique, c'est le moteur de la richesse moderne. Voici comment les leaders mondiaux ont capitalisé sur les bases de données :</p>
+
+                        <h4>1. 🗄️ Larry Ellison (Oracle)</h4>
+                        <p><strong>Impact :</strong> A industrialisé la première base de données relationnelle commerciale.</p>
+                        <ul class="content-list">
+                            <li>Fortune bâtie sur l'intégrité et la sécurité des données critiques</li>
+                            <li>Oracle domine le marché des BDD d'entreprise depuis les années 1980</li>
+                            <li>Les banques, gouvernements et grandes entreprises lui confient leurs données les plus sensibles</li>
+                            <li>Stratégie : Fiabilité absolue = valeur maximale</li>
+                        </ul>
+
+                        <h4>2. 🚀 Elon Musk (Tesla/X)</h4>
+                        <p><strong>Impact :</strong> Stocke des pétaoctets de données de conduite réelle pour entraîner des modèles d'IA.</p>
+                        <ul class="content-list">
+                            <li>Tesla collecte des milliards de km de données de conduite</li>
+                            <li>Ces données (Vector Databases) entraînent les modèles d'IA de conduite autonome</li>
+                            <li>La valeur réside dans la qualité, la diversité et le volume des données</li>
+                            <li>Stratégie : Les données = l'avantage concurrentiel en IA</li>
+                        </ul>
+
+                        <h4>3. 🛒 Jeff Bezos (Amazon)</h4>
+                        <p><strong>Impact :</strong> Utilise des bases de données analytiques (OLAP) pour prédire les comportements d'achat.</p>
+                        <ul class="content-list">
+                            <li>Amazon traite des millions de transactions par jour</li>
+                            <li>Utilise OLAP (Online Analytical Processing) pour l'analyse en temps réel</li>
+                            <li>Les moteurs de recommandation prédisent ce que vous voulez acheter</li>
+                            <li>Stratégie : Les données client = personnalisation + profits</li>
+                        </ul>
+
+                        <h4>📈 Leçon clé</h4>
+                        <p>Les bases de données bien conçues et exploitées créent de la valeur exponentielle. Maîtriser MERISE et SQL, c'est acquérir les compétences pour construire la richesse numérique.</p>
+                    </div>
+                </div>
+
+                <!-- Fondamentaux Conceptuels -->
+                <div id="fondamentaux" class="module">
+                    <div class="module-header">
+                        <h2>🏗️ 3.FONDAMENTAUX CONCEPTUELS</h2>
+                        <span class="module-level">Intermédiaire</span>
+                    </div>
+                    <div class="module-content">
+                        <h3>1. Problèmes des systèmes traditionnels</h3>
+                        <ul class="content-list">
+                            <li><strong>Fichiers plats</strong> : Données redondantes, incohérentes</li>
+                            <li><strong>Accès concurrentiel</strong> : Problèmes de verrouillage</li>
+                            <li><strong>Sécurité</strong> : Pas de contrôle granulaire</li>
+                            <li><strong>Recherche</strong> : Algorithmes linéaires inefficaces</li>
+                        </ul>
+
+                        <h3>2. Solutions apportées par les BDD</h3>
+                        <ul class="content-list">
+                            <li><strong>Centralisation</strong> : Source unique de vérité</li>
+                            <li><strong>ACID</strong> : Atomicité, Cohérence, Isolation, Durabilité</li>
+                            <li><strong>Langage standardisé</strong> : SQL</li>
+                            <li><strong>Optimisation</strong> : Indexation, cache, requêtes optimisées</li>
+                        </ul>
+
+                        <h4>📊 Exemple concret</h4>
+                        <div class="code-block">
+                            <code>
+AVANT (fichiers) :<br>
+clients.txt, commandes.txt, produits.txt<br>
+Problème : Si un client change d'adresse, faut modifier tous les fichiers<br>
+<br>
+APRÈS (BDD) :<br>
+Table Clients, Table Commandes<br>
+Solution : Une seule modification dans la table Clients
+                            </code>
+                        </div>
+
+                        <h3>3. Base de Données vs SGBD</h3>
+                        <p><strong>Base de Données (BDD)</strong> : Collection organisée de données structurées (analogie : une bibliothèque)</p>
+                        <p><strong>Système de Gestion (SGBD)</strong> : Logiciel qui manipule la BDD (analogie : le bibliothécaire)</p>
+                        
+                        <h4>🏢 SGBD populaires</h4>
+                        <div class="code-block">
+                            <code>
+MySQL : Open source, performant pour le web<br>
+PostgreSQL : Avancé, support JSON, transactions complexes<br>
+Oracle : Entreprise, coûteux, très puissant<br>
+SQL Server : Microsoft, intégration .NET<br>
+SQLite : Embarqué, fichiers légers
+                            </code>
+                        </div>
+
+                        <h3>4. Objectifs fondamentaux d'un SGBD</h3>
+                        <ul class="content-list">
+                            <li><strong>Intégrité des données</strong> : Pas de redondance, cohérence garantie</li>
+                            <li><strong>Sécurité multi-niveau</strong> : Authentification, autorisation, chiffrement</li>
+                            <li><strong>Transactions ACID</strong> : Tout ou rien (atomicité)</li>
+                            <li><strong>Performance</strong> : Cache, plans d'exécution optimisés</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Modélisation -->
+                <div id="modelisation" class="module">
+                    <div class="module-header">
+                        <h2>📐 4.MODÉLISATION CONCEPTUELLE</h2>
+                        <span class="module-level">Intermédiaire</span>
+                    </div>
+                    <div class="module-content">
+                        <h3>5. Pourquoi modéliser avant de coder ?</h3>
+                        <p><strong>Le processus en V :</strong> Besoins → MCD → MLD → MPD</p>
+                        
+                        <h4>⚠️ Risques sans modélisation</h4>
+                        <ul class="content-list">
+                            <li>Anomalies d'insertion : Impossible d'ajouter certaines données</li>
+                            <li>Anomalies de mise à jour : Données incohérentes</li>
+                            <li>Anomalies de suppression : Perte d'informations non voulues</li>
+                            <li>Redondance : Stockage inutile, incohérences</li>
+                        </ul>
+
+                        <h3>6. Entités, Attributs et Identité</h3>
+                        <p><strong>ENTITÉ</strong> : Objet du monde réel identifiable (ex: Étudiant, Cours)</p>
+                        <p><strong>ATTRIBUT</strong> : Propriété d'une entité (ex: nom, date_naissance)</p>
+                        <p><strong>IDENTIFIANT (Clé)</strong> : Élément unique et stable (ex: id_etudiant)</p>
+
+                        <h3>7. Relations et Cardinalités</h3>
+                        <p><strong>Cardinalités : (min, max)</strong></p>
+                        <ul class="content-list">
+                            <li>(1,1) : Exactement un</li>
+                            <li>(0,1) : Zéro ou un</li>
+                            <li>(1,N) : Au moins un, plusieurs possibles</li>
+                            <li>(0,N) : Zéro ou plusieurs</li>
+                        </ul>
+
+                        <h4>📋 Exemple : Université</h4>
+                        <div class="code-block">
+                            <code>
+Étudiant (0,N) ---- (1,N) Cours<br>
+Professeur (0,N) ---- (1,1) Cours<br>
+Cours (1,1) ---- (0,1) Salle
+                            </code>
+                        </div>
+
+                        <h3>8. Les Clés - Donner une identité aux données</h3>
+                        <p><strong>Clé Primaire (PK)</strong> : Identifie de manière unique chaque ligne</p>
+                        <p><strong>Clé Étrangère (FK)</strong> : Référence une PK d'une autre table</p>
+                        <p><strong>Clé Candidate</strong> : Pourrait être PK</p>
+                        <p><strong>Clé Alternative</strong> : Candidate non choisie comme PK</p>
+
+                        <h3>9. Transformation MCD → MLD</h3>
+                        <ul class="content-list">
+                            <li><strong>Règle 1</strong> : Une entité → Une table</li>
+                            <li><strong>Règle 2</strong> : Un attribut → Une colonne</li>
+                            <li><strong>Règle 3</strong> : Relation N-N → Table d'association</li>
+                            <li><strong>Règle 4</strong> : Relation 1-N → FK côté N</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- SQL et Manipulation -->
+                <div id="sql" class="module">
+                    <div class="module-header">
+                        <h2>🗄️ 5.SQL ET MANIPULATION DES DONNÉES</h2>
+                        <span class="module-level">Intermédiaire</span>
+                    </div>
+                    <div class="module-content">
+                        <h3>10. Découvrir SQL</h3>
+                        <p><strong>SQL (Structured Query Language)</strong> : Langage standardisé depuis 1986 pour interroger les bases de données.</p>
+                        
+                        <h4>📚 Sous-langages SQL</h4>
+                        <ul class="content-list">
+                            <li><strong>LDD</strong> : CREATE, ALTER, DROP - Définition des structures</li>
+                            <li><strong>LMD</strong> : SELECT, INSERT, UPDATE, DELETE - Manipulation des données</li>
+                            <li><strong>LCD</strong> : GRANT, REVOKE - Contrôle des accès</li>
+                            <li><strong>LCT</strong> : COMMIT, ROLLBACK - Gestion des transactions</li>
+                        </ul>
+
+                        <h3>11. LDD - Créer les structures</h3>
+                        <div class="code-block">
+                            <code>
+CREATE TABLE Produits (<br>
+&nbsp;&nbsp;&nbsp;id_produit INT PRIMARY KEY AUTO_INCREMENT,<br>
+&nbsp;&nbsp;&nbsp;nom VARCHAR(100) NOT NULL,<br>
+&nbsp;&nbsp;&nbsp;prix DECIMAL(10,2) CHECK (prix > 0),<br>
+&nbsp;&nbsp;&nbsp;stock INT DEFAULT 0<br>
+);
+                            </code>
+                        </div>
+
+                        <h3>12. Contraintes - Les lois de la base de données</h3>
+                        <ul class="content-list">
+                            <li><strong>NOT NULL</strong> : Valeur obligatoire</li>
+                            <li><strong>UNIQUE</strong> : Pas de doublons</li>
+                            <li><strong>CHECK</strong> : Validation de plage/format</li>
+                            <li><strong>DEFAULT</strong> : Valeur par défaut</li>
+                            <li><strong>FOREIGN KEY</strong> : Référence vers autre table</li>
+                        </ul>
+
+                        <h3>13. CRUD - Insérer, modifier, supprimer</h3>
+                        <div class="code-block">
+                            <code>
+-- INSERT : Ajouter<br>
+INSERT INTO Clients (nom, email) VALUES ('Dupont', 'dupont@mail.com');<br>
+<br>
+-- UPDATE : Modifier<br>
+UPDATE Produits SET prix = prix * 0.9 WHERE categorie = 'Info';<br>
+<br>
+-- DELETE : Supprimer<br>
+DELETE FROM Logs WHERE date < '2020-01-01';<br>
+<br>
+-- SELECT : Consulter<br>
+SELECT * FROM Clients WHERE ville = 'Paris';
+                            </code>
+                        </div>
+
+                        <h3>14. Filtrage et tri</h3>
+                        <div class="code-block">
+                            <code>
+-- WHERE pour filtrer<br>
+SELECT * FROM Produits WHERE prix > 100 AND stock > 0;<br>
+<br>
+-- ORDER BY pour trier<br>
+SELECT * FROM Employes ORDER BY departement, salaire DESC;<br>
+<br>
+-- LIMIT pour paginer<br>
+SELECT * FROM Articles LIMIT 20 OFFSET 40;  -- Page 3
+                            </code>
+                        </div>
+
+                        <h3>15. Jointures - Relier les tables</h3>
+                        <div class="code-block">
+                            <code>
+-- INNER JOIN : Intersection<br>
+SELECT c.nom, co.montant<br>
+FROM Clients c<br>
+INNER JOIN Commandes co ON c.id = co.client_id;<br>
+<br>
+-- LEFT JOIN : Tous les clients, même sans commande<br>
+SELECT c.nom, COUNT(co.id) AS nb_commandes<br>
+FROM Clients c<br>
+LEFT JOIN Commandes co ON c.id = co.client_id<br>
+GROUP BY c.id;
+                            </code>
+                        </div>
+
+                        <h3>16. Fonctions et regroupement</h3>
+                        <div class="code-block">
+                            <code>
+-- Agrégation<br>
+SELECT COUNT(*), AVG(prix), SUM(stock)<br>
+FROM Produits;<br>
+<br>
+-- GROUP BY<br>
+SELECT categorie, COUNT(*), AVG(prix)<br>
+FROM Produits<br>
+GROUP BY categorie;<br>
+<br>
+-- HAVING pour filtrer les groupes<br>
+GROUP BY categorie<br>
+HAVING COUNT(*) > 10;
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Techniques Avancées -->
+                <div id="avance" class="module">
+                    <div class="module-header">
+                        <h2>⚡ 6.TECHNIQUES AVANCÉES</h2>
+                        <span class="module-level">Avancé</span>
+                    </div>
+                    <div class="module-content">
+                        <h3>17. Sous-requêtes</h3>
+                        <div class="code-block">
+                            <code>
+-- Produits plus chers que la moyenne<br>
+SELECT nom, prix<br>
+FROM Produits<br>
+WHERE prix > (SELECT AVG(prix) FROM Produits);
+                            </code>
+                        </div>
+
+                        <h3>18. Indexation - Optimiser les performances</h3>
+                        <ul class="content-list">
+                            <li><strong>Index simple</strong> : Sur une colonne de recherche fréquente</li>
+                            <li><strong>Index composite</strong> : Sur plusieurs colonnes</li>
+                            <li><strong>Index unique</strong> : Pour garantir l'unicité</li>
+                        </ul>
+                        <div class="code-block">
+                            <code>
+CREATE INDEX idx_nom ON Clients(nom);<br>
+CREATE UNIQUE INDEX idx_email ON Clients(email);
+                            </code>
+                        </div>
+
+                        <h3>19. Vues - Simplifier l'accès</h3>
+                        <div class="code-block">
+                            <code>
+CREATE VIEW Vue_Clients_Actifs AS<br>
+SELECT id, nom, email<br>
+FROM Clients<br>
+WHERE actif = 1;
+                            </code>
+                        </div>
+
+                        <h3>20. Triggers - Automatiser les actions</h3>
+                        <div class="code-block">
+                            <code>
+CREATE TRIGGER trig_audit<br>
+AFTER UPDATE ON Clients<br>
+FOR EACH ROW<br>
+INSERT INTO Audit VALUES (NEW.id, 'UPDATE', NOW());
+                            </code>
+                        </div>
+
+                        <h3>21. Procédures stockées</h3>
+                        <div class="code-block">
+                            <code>
+DELIMITER $$<br>
+CREATE PROCEDURE Calculer_Stats(IN p_annee INT)<br>
+BEGIN<br>
+&nbsp;&nbsp;&nbsp;SELECT SUM(montant), AVG(montant), COUNT(*)<br>
+&nbsp;&nbsp;&nbsp;FROM Commandes<br>
+&nbsp;&nbsp;&nbsp;WHERE YEAR(date) = p_annee;<br>
+END$$<br>
+DELIMITER ;
+                            </code>
+                        </div>
+
+                        <hr style="border: 1px solid rgba(0, 240, 255, 0.3); margin: 2rem 0;">
+
+                        <h3>22. 🔄 Transactions et Propriétés ACID</h3>
+                        <p>Une <strong>transaction</strong> est une unité logique de travail regroupant plusieurs opérations SQL. Son objectif : assurer que <strong>soit tout est appliqué, soit rien n'est appliqué</strong> (règle du "Tout ou rien").</p>
+
+                        <h4>📌 Pourquoi utiliser les transactions ?</h4>
+                        <ul class="content-list">
+                            <li>Prévenir les incohérences (ex: argent débité mais pas crédité)</li>
+                            <li>Gérer les erreurs en annulant proprement</li>
+                            <li>Contrôler les accès concurrents (plusieurs utilisateurs simultanés)</li>
+                            <li>Sécuriser les données même en cas de panne électrique ou crash serveur</li>
+                        </ul>
+
+                        <h4>⚙️ Les commandes de contrôle d'une transaction</h4>
+                        <div class="code-block">
+                            <code>
+BEGIN;  -- Marque le début d'une transaction<br>
+<br>
+-- Opérations SQL...<br>
+UPDATE Comptes SET solde = solde - 100 WHERE id = 1;<br>
+UPDATE Comptes SET solde = solde + 100 WHERE id = 2;<br>
+<br>
+COMMIT;  -- Valide la transaction (les données deviennent permanentes)<br>
+-- ou<br>
+ROLLBACK;  -- Annule tout et revient à l'état d'avant BEGIN
+                            </code>
+                        </div>
+
+                        <p style="color: var(--neon-green); font-weight: 700; margin: 1.5rem 0;">📍 SAVEPOINT - Points de sauvegarde partiels</p>
+                        <p>Crée un point d'annulation partiel à l'intérieur d'une transaction, utile pour ne pas tout annuler :</p>
+                        <div class="code-block">
+                            <code>
+BEGIN;<br>
+INSERT INTO Commande(id_client, date) VALUES (5, NOW());<br>
+SAVEPOINT commande_ok;  -- Point de sauvegarde<br>
+<br>
+INSERT INTO DetailsCommande(id_cmd, id_prod, qte) VALUES (10, 3, 2);<br>
+<br>
+-- Si erreur dans les détails :<br>
+ROLLBACK TO commande_ok;  -- Annuler seulement les détails<br>
+<br>
+COMMIT;  -- Valider la commande sans ses détails
+                            </code>
+                        </div>
+
+                        <hr style="border: 1px solid rgba(0, 240, 255, 0.3); margin: 2rem 0;">
+
+                        <h4>🛡️ Les 4 Propriétés ACID (fondamentales)</h4>
+
+                        <p><strong style="color: var(--neon-pink);">A — Atomicité (Atomicity)</strong></p>
+                        <p>La transaction est <strong>indivisible</strong> : soit toutes les opérations réussissent et sont validées (COMMIT), soit une échoue et tout est annulé (ROLLBACK).</p>
+                        <p style="background: rgba(255, 0, 110, 0.1); padding: 0.8rem; border-radius: 4px; margin: 1rem 0;">
+                            <strong>Exemple :</strong> Un virement bancaire doit débiter du compte A ET créditer le compte B. Si le crédit échoue, le débit doit être annulé pour éviter de perdre l'argent.
+                        </p>
+
+                        <p><strong style="color: var(--neon-cyan);">C — Cohérence (Consistency)</strong></p>
+                        <p>La transaction fait passer la base de données d'un <strong>état valide à un autre état valide</strong>, en respectant toutes les règles :</p>
+                        <ul class="content-list">
+                            <li>Contraintes d'intégrité (Clé primaire, Clé étrangère)</li>
+                            <li>Contraintes CHECK</li>
+                            <li>Règles métier (ex: solde ≥ 0, stock ≥ 0, email unique)</li>
+                        </ul>
+                        <p style="background: rgba(0, 240, 255, 0.1); padding: 0.8rem; border-radius: 4px; margin: 1rem 0;">
+                            <strong>Exemple :</strong> Si une commande est créée, tous ses détails doivent aussi être créés. Si un détail ne peut pas être ajouté (produit inexistant), la transaction complète est annulée.
+                        </p>
+
+                        <p><strong style="color: var(--neon-green);">I — Isolation (Isolation)</strong></p>
+                        <p>Lorsque plusieurs transactions s'exécutent en même temps, elles ne doivent pas se perturber. Une transaction ne voit pas les changements non validés des autres transactions.</p>
+                        <p style="color: var(--neon-pink); font-weight: 700; margin: 1rem 0; font-size: 0.95rem;">Problèmes évités par l'isolation :</p>
+                        <ul class="content-list">
+                            <li><strong>Dirty Read :</strong> Lire des données modifiées mais non confirmées par une autre transaction</li>
+                            <li><strong>Non-repeatable Read :</strong> Relire une valeur et la trouver modifiée par une autre transaction</li>
+                            <li><strong>Phantom Read :</strong> L'apparition ou disparition de lignes pendant une transaction à cause d'un INSERT/DELETE concurrent</li>
+                        </ul>
+                        <p style="color: var(--neon-cyan); font-weight: 700; margin: 1.5rem 0; font-size: 0.95rem;">Niveaux d'isolation (du plus faible au plus fort, selon le SGBD) :</p>
+                        <ul class="content-list">
+                            <li><strong>READ UNCOMMITTED :</strong> Niveau faible - peut avoir des dirty reads (rarement utilisé)</li>
+                            <li><strong>READ COMMITTED :</strong> Niveau courant - évite les dirty reads (défaut dans beaucoup de SGBD)</li>
+                            <li><strong>REPEATABLE READ :</strong> Niveau fort - évite les dirty reads et non-repeatable reads</li>
+                            <li><strong>SERIALIZABLE :</strong> Très fort mais plus lent - aucun problème de concurrence (sérialise les transactions)</li>
+                        </ul>
+
+                        <p><strong style="color: #39ff14;">D — Durabilité (Durability)</strong></p>
+                        <p>Après un <strong>COMMIT</strong>, les données sont <strong>définitivement enregistrées sur disque</strong>. Même en cas de panne électrique, crash serveur ou catastrophe, le résultat persiste après redémarrage.</p>
+                        <p style="background: rgba(57, 255, 20, 0.1); padding: 0.8rem; border-radius: 4px; margin: 1rem 0;">
+                            <strong>Exemple :</strong> Si le serveur tombe juste après COMMIT d'un virement, l'argent a quand même été transféré définitivement. Il persiste sur le disque dur et sera toujours là après redémarrage.
+                        </p>
+
+                        <hr style="border: 1px solid rgba(0, 240, 255, 0.3); margin: 2rem 0;">
+
+                        <h4>📊 Résumé comparatif des 4 propriétés ACID</h4>
+                        <div class="table-wrapper">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Propriété</th>
+                                        <th>Signification</th>
+                                        <th>Exemple concret</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Atomicité</strong></td>
+                                        <td>Tout ou rien - indivisibilité</td>
+                                        <td>Virement : débit + crédit simultané ou rien du tout</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Cohérence</strong></td>
+                                        <td>État valide → État valide</td>
+                                        <td>Stock ne peut jamais être négatif, email unique</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Isolation</strong></td>
+                                        <td>Pas d'interférence entre transactions</td>
+                                        <td>Deux clients ne voient pas les mêmes données temporairement</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Durabilité</strong></td>
+                                        <td>Données persistantes après COMMIT</td>
+                                        <td>Panne serveur = pas de perte de données validées</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <hr style="border: 1px solid rgba(0, 240, 255, 0.3); margin: 2rem 0;">
+
+                        <h4>💡 Exemple complet : Virement bancaire sécurisé</h4>
+                        <p><strong>Cas nominal (succès) :</strong></p>
+                        <div class="code-block">
+                            <code>
+BEGIN;  -- Début de transaction<br>
+<br>
+UPDATE Comptes SET solde = solde - 100 WHERE id = 1;  -- Débit<br>
+UPDATE Comptes SET solde = solde + 100 WHERE id = 2;  -- Crédit<br>
+<br>
+COMMIT;  -- Valider si tout est OK
+                            </code>
+                        </div>
+
+                        <p><strong>Cas avec erreur (annulation) :</strong></p>
+                        <div class="code-block">
+                            <code>
+BEGIN;<br>
+<br>
+UPDATE Comptes SET solde = solde - 100 WHERE id = 1;<br>
+<br>
+-- Si une erreur survient (compte inexistant, solde insuffisant, etc.) :<br>
+-- La 2ème opération échoue<br>
+ROLLBACK;  -- Annuler TOUT (y compris le débit)
+                            </code>
+                        </div>
+
+                        <p><strong>Version sécurisée avec vérification de solde :</strong></p>
+                        <div class="code-block">
+                            <code>
+BEGIN;<br>
+<br>
+-- Vérifier le solde avant de débiter<br>
+UPDATE Comptes<br>
+SET solde = solde - 100<br>
+WHERE id = 1 AND solde >= 100;  -- Condition : solde suffisant<br>
+<br>
+-- Si aucune ligne modifiée (solde insuffisant) :<br>
+-- Le code applicatif peut détecter et faire ROLLBACK<br>
+<br>
+-- Sinon, créditer<br>
+UPDATE Comptes SET solde = solde + 100 WHERE id = 2;<br>
+<br>
+COMMIT;  -- Succès
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapitre 6: NoSQL -->
+                <div id="nosql" class="module">
+                    <div class="module-header">
+                        <h2>📚 7.NoSQL (Définition et Comparaison avec SQL)</h2>
+                        <span class="module-level">Avancé</span>
+                    </div>
+                    <div class="module-content">
+                        <p style="color: rgba(0, 240, 255, 0.7); font-style: italic; margin-bottom: 1.2rem;">Comprendre les alternatives modernes aux bases relationnelles pour gérer les données du XXIe siècle : volumes massifs, données non structurées, et distribution globale.</p>
+
+                        <h3>1. Qu'est-ce que NoSQL ?</h3>
+                        <p><strong>NoSQL</strong> signifie <strong>"Not Only SQL"</strong> (pas uniquement SQL).</p>
+                        <p>C'est un ensemble de systèmes de gestion de bases de données conçus pour répondre à des besoins modernes :</p>
+                        <ul class="content-list">
+                            <li>Gérer de <strong>très grands volumes</strong> de données</li>
+                            <li>Stocker des données <strong>non structurées</strong> ou <strong>semi-structurées</strong> (ex: JSON, images, logs)</li>
+                            <li>Offrir une <strong>scalabilité horizontale</strong> (ajouter plusieurs serveurs plutôt que d'en renforcer un)</li>
+                            <li>Assurer de bonnes performances pour des applications web, mobiles et Big Data</li>
+                        </ul>
+                        <p style="background: rgba(0, 240, 255, 0.1); padding: 1rem; border-radius: 4px; margin: 1.5rem 0;">
+                            <strong>🔑 Différence clé :</strong> Contrairement aux bases SQL avec un <strong>schéma rigide</strong>, les bases NoSQL utilisent souvent un <strong>schéma flexible</strong> où la structure des données peut évoluer facilement.
+                        </p>
+
+                        <hr style="border: 1px solid rgba(0, 240, 255, 0.3); margin: 2rem 0;">
+
+                        <h3>2. Les 4 grands types de bases NoSQL</h3>
+
+                        <h4>📄 A) Bases orientées documents (Document Stores)</h4>
+                        <ul class="content-list">
+                            <li>Les données sont stockées sous forme de <strong>documents</strong> (souvent JSON/BSON)</li>
+                            <li>Exemples : <strong>MongoDB</strong>, CouchDB, Firebase</li>
+                            <li>Avantages : naturel pour représenter des objets complexes (profil utilisateur, commande, catalogue)</li>
+                        </ul>
+                        <p><strong>Exemple de document :</strong></p>
+                        <div class="code-block">
+                            <code>
+{<br>
+&nbsp;&nbsp;"id": 1,<br>
+&nbsp;&nbsp;"nom": "Sara",<br>
+&nbsp;&nbsp;"age": 22,<br>
+&nbsp;&nbsp;"adresse": {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"ville": "Rabat",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"codePostal": 10000<br>
+&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;"commandes": [<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{"id": 101, "montant": 350},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{"id": 102, "montant": 420}<br>
+&nbsp;&nbsp;]<br>
+}
+                            </code>
+                        </div>
+
+                        <h4>🔑 B) Bases clé-valeur (Key-Value Stores)</h4>
+                        <ul class="content-list">
+                            <li>Chaque donnée est stockée comme une paire simple : <strong>clé → valeur</strong></li>
+                            <li>Exemples : <strong>Redis</strong>, DynamoDB, Memcached</li>
+                            <li>Avantages : très rapide, idéal pour cache, sessions utilisateur, tokens</li>
+                        </ul>
+                        <p><strong>Exemple :</strong></p>
+                        <div class="code-block">
+                            <code>
+"session_12345" → { "userId": 7, "role": "admin", "expires": "2026-02-18" }<br>
+"produit:501" → { "nom": "Laptop", "prix": 800, "stock": 15 }<br>
+"cache:user:7" → { "name": "Sara", "email": "sara@mail.com" }
+                            </code>
+                        </div>
+
+                        <h4>📊 C) Bases orientées colonnes (Column-Family)</h4>
+                        <ul class="content-list">
+                            <li>Données organisées en <strong>familles de colonnes</strong> (optimisées pour Big Data)</li>
+                            <li>Exemples : <strong>Cassandra</strong>, HBase</li>
+                            <li>Avantages : très bon pour logs, données IoT, analytics massives</li>
+                            <li>Raison : compression verticale excellente (colonne par colonne)</li>
+                        </ul>
+
+                        <h4>🕸️ D) Bases orientées graphes (Graph Databases)</h4>
+                        <ul class="content-list">
+                            <li>Données représentées par des <strong>nœuds</strong> et des <strong>relations</strong></li>
+                            <li>Exemples : <strong>Neo4j</strong>, ArangoDB</li>
+                            <li>Avantages : excellent pour relations complexes (réseaux sociaux, recommandations, taxonomies)</li>
+                        </ul>
+                        <p><strong>Exemple :</strong> "Utilisateur A connaît Utilisateur B" ou "Produit X est similaire à Produit Y"</p>
+
+                        <hr style="border: 1px solid rgba(0, 240, 255, 0.3); margin: 2rem 0;">
+
+                        <h3>3. Rappel : Les bases SQL (Relationnelles)</h3>
+                        <p>Les bases <strong>SQL</strong> organisent les données en :</p>
+                        <ul class="content-list">
+                            <li><strong>Tables</strong> avec lignes et colonnes</li>
+                            <li>Un <strong>schéma fixe</strong> défini à l'avance (structure immuable)</li>
+                            <li>Des <strong>relations</strong> entre tables via clés primaires/étrangères</li>
+                            <li>Des requêtes puissantes (JOIN, GROUP BY, agrégations)</li>
+                        </ul>
+                        <p><strong>Exemples :</strong> MySQL, PostgreSQL, Oracle, SQL Server</p>
+
+                        <hr style="border: 1px solid rgba(0, 240, 255, 0.3); margin: 2rem 0;">
+
+                        <h3>4. 📊 Comparaison NoSQL vs SQL</h3>
+
+                        <h4>A) Structure des données</h4>
+                        <div class="table-wrapper">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Aspect</th>
+                                        <th>SQL</th>
+                                        <th>NoSQL</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Schéma</strong></td>
+                                        <td>Rigide et défini à l'avance</td>
+                                        <td>Flexible et évolutif</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Adaptation</strong></td>
+                                        <td>Ajouter une colonne = modifier la table</td>
+                                        <td>Ajouter des champs = aucun problème</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Idéal pour</strong></td>
+                                        <td>Données fortement structurées</td>
+                                        <td>Données variables, JSON, documents</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h4>B) Relations entre données</h4>
+                        <div class="table-wrapper">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Aspect</th>
+                                        <th>SQL</th>
+                                        <th>NoSQL</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Jointures</strong></td>
+                                        <td>Très performant avec JOIN</td>
+                                        <td>Souvent évite les jointures</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Modèle relationnel</strong></td>
+                                        <td>Idéal quand données très liées</td>
+                                        <td>Utilise imbrication (embedding)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Exemple</strong></td>
+                                        <td>Clients + Commandes + Détails en 3 tables</td>
+                                        <td>Client avec commandes imbriquées</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h4>C) Transactions et fiabilité</h4>
+                        <div class="table-wrapper">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Aspect</th>
+                                        <th>SQL</th>
+                                        <th>NoSQL</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Transactions</strong></td>
+                                        <td>Robustes et ACID garanties</td>
+                                        <td>Historiquement moins fiables (BASE)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Fiabilité</strong></td>
+                                        <td>Très adapté aux systèmes critiques</td>
+                                        <td>Adapté aux systèmes distribués</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Exemples</strong></td>
+                                        <td>Banque, comptabilité, logistique</td>
+                                        <td>Réseaux sociaux, messagerie, logs</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h4>D) Scalabilité (capacité à grandir)</h4>
+                        <div class="table-wrapper">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Aspect</th>
+                                        <th>SQL</th>
+                                        <th>NoSQL</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Scale-up</strong></td>
+                                        <td>Renforcer UN seul serveur (CPU, RAM)</td>
+                                        <td>Ajouter plusieurs serveurs</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Scale-out</strong></td>
+                                        <td>Existe mais complexe (sharding)</td>
+                                        <td>Conçu nativement pour cela</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Idéal pour</strong></td>
+                                        <td>Entreprises moyennes</td>
+                                        <td>Grandes architectures distribuées</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h4>E) Performance</h4>
+                        <div class="table-wrapper">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Aspect</th>
+                                        <th>SQL</th>
+                                        <th>NoSQL</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Requêtes complexes</strong></td>
+                                        <td>Excellent (JOIN, agrégations)</td>
+                                        <td>Moins performant</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Lectures/écritures rapides</strong></td>
+                                        <td>Bon mais limité par un serveur</td>
+                                        <td>Excellent à grande échelle</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Trafic massif</strong></td>
+                                        <td>Peut saturer le serveur</td>
+                                        <td>Distribue la charge</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <hr style="border: 1px solid rgba(0, 240, 255, 0.3); margin: 2rem 0;">
+
+                        <h3>5. 🔄 ACID (SQL) vs BASE (NoSQL)</h3>
+
+                        <h4>SQL : Modèle ACID (que vous connaissez)</h4>
+                        <ul class="content-list">
+                            <li><strong>A</strong>tomicité : tout ou rien</li>
+                            <li><strong>C</strong>ohérence : la base reste valide</li>
+                            <li><strong>I</strong>solation : transactions indépendantes</li>
+                            <li><strong>D</strong>urabilité : données conservées après COMMIT</li>
+                        </ul>
+                        <p style="background: rgba(0, 240, 255, 0.1); padding: 1rem; border-radius: 4px; margin: 1rem 0;">
+                            ➡️ <strong>Parfait pour les systèmes exigeant une fiabilité forte.</strong>
+                        </p>
+
+                        <h4>NoSQL : Modèle BASE (souvent utilisé)</h4>
+                        <ul class="content-list">
+                            <li><strong>B</strong>asically Available : disponible la plupart du temps</li>
+                            <li><strong>S</strong>oft State : état qui peut évoluer</li>
+                            <li><strong>E</strong>ventual Consistency : cohérence atteinte progressivement</li>
+                        </ul>
+
+                        <p style="color: var(--neon-pink); font-weight: 700; margin: 1.5rem 0;">📌 Eventual Consistency (Cohérence Progressive)</p>
+                        <p>Sur un système distribué, une mise à jour peut :</p>
+                        <ul class="content-list">
+                            <li>D'abord apparaître sur le serveur 1</li>
+                            <li>Puis se propager au serveur 2</li>
+                            <li>Puis au serveur 3 (après un certain délai)</li>
+                            <li>Finalement, tous les serveurs sont cohérents</li>
+                        </ul>
+                        <p style="background: rgba(255, 0, 110, 0.1); padding: 0.8rem; border-radius: 4px; margin: 1rem 0;">
+                            <strong>Exemple :</strong> Vous likez un post sur Facebook. Le like apparaît immédiatement pour vous, mais met quelques millisecondes avant d'être visible aux autres. C'est BASE, pas ACID.
+                        </p>
+
+                        <hr style="border: 1px solid rgba(0, 240, 255, 0.3); margin: 2rem 0;">
+
+                        <h3>6. 🎯 Quand choisir SQL ou NoSQL ?</h3>
+
+                        <h4>✅ Choisir SQL si :</h4>
+                        <ul class="content-list">
+                            <li>Données bien structurées et stables</li>
+                            <li>Relations complexes entre tables</li>
+                            <li>Besoin de transactions fortes (ACID)</li>
+                            <li>Requêtes complexes nécessaires (JOIN, GROUP BY, agrégations)</li>
+                        </ul>
+                        <p style="color: var(--neon-green); font-weight: 700;">Exemples : Banques, comptabilité, ERP, gestion de stock, systèmes critiques</p>
+
+                        <h4>✅ Choisir NoSQL si :</h4>
+                        <ul class="content-list">
+                            <li>Données non structurées ou qui changent souvent</li>
+                            <li>Besoin de scalabilité horizontale</li>
+                            <li>Très grand volume de données et forte charge</li>
+                            <li>Systèmes distribués et temps réel</li>
+                        </ul>
+                        <p style="color: var(--neon-cyan); font-weight: 700;">Exemples : Réseaux sociaux, logs, IoT, messagerie, catalogue e-commerce, systèmes temps réel, BigData</p>
+
+                        <hr style="border: 1px solid rgba(0, 240, 255, 0.3); margin: 2rem 0;">
+
+                        <h3>7. 📋 Résumé comparatif (Tableau final)</h3>
+                        <div class="table-wrapper">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Critère</th>
+                                        <th>SQL</th>
+                                        <th>NoSQL</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Modèle</strong></td>
+                                        <td>Relationnel (tables)</td>
+                                        <td>Multiple (docs, clé-valeur, colonnes, graphe)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Schéma</strong></td>
+                                        <td>Rigide et défini</td>
+                                        <td>Flexible et évolutif</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Relations</strong></td>
+                                        <td>Fortes via clés étrangères</td>
+                                        <td>Imbrication ou références</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Transactions</strong></td>
+                                        <td>ACID (fortement garanties)</td>
+                                        <td>BASE (cohérence progressive)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Scalabilité</strong></td>
+                                        <td>Scale-up (un seul serveur)</td>
+                                        <td>Scale-out (plusieurs serveurs)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Performance requêtes</strong></td>
+                                        <td>Excellente pour relationnel</td>
+                                        <td>Excellente pour lecture/écriture simple</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Fiabilité</strong></td>
+                                        <td>Très haute (systèmes critiques)</td>
+                                        <td>Haute (systèmes distribués)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Cas d'usage</strong></td>
+                                        <td>Entreprises, finance, ERP</td>
+                                        <td>Web, mobile, BigData, temps réel</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <hr style="border: 1px solid rgba(0, 240, 255, 0.3); margin: 2rem 0;">
+
+                        <h4>💡 Conseil Final</h4>
+                        <p style="background: rgba(0, 240, 255, 0.15); padding: 1.2rem; border-left: 4px solid var(--neon-cyan); border-radius: 4px; font-size: 0.95rem;">
+                            <strong>Les deux ne sont pas ennemis !</strong> Dans les architectures modernes, on utilise souvent les <strong>deux</strong> (polyglot persistence) :<br>
+                            💼 SQL pour les données critiques (transactions, comptabilité)<br>
+                            📱 NoSQL pour les données volumineuses (logs, cache, sessions)<br>
+                            Exemple : Twitter utilise MySQL + Cassandra + Redis.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Application Pratique -->
+                <div id="pratique" class="module">
+                    <div class="module-header">
+                        <h2>🍳8. APPLICATION PRATIQUE : LA CUISINE</h2>
+                        <span class="module-level">Fondamentaux</span>
+                    </div>
+                    <div class="module-content">
+                        <h3>Analogie : Cuisine = Base de Données</h3>
+                        <div class="code-block">
+                            <code>
+CUISINE ↔ BASE DE DONNÉES<br>
+────────────┬─────────────<br>
+Recettes ↔ Schéma/Tables<br>
+Ingrédients ↔ Données<br>
+Chef ↔ Administrateur<br>
+Livre de recettes ↔ Documentation
+                            </code>
+                        </div>
+
+                        <h3>Modélisation complète</h3>
+                        <div class="code-block">
+                            <code>
+CREATE TABLE Ingredients (<br>
+&nbsp;&nbsp;&nbsp;id INT PRIMARY KEY,<br>
+&nbsp;&nbsp;&nbsp;nom VARCHAR(100) UNIQUE,<br>
+&nbsp;&nbsp;&nbsp;categorie VARCHAR(50),<br>
+&nbsp;&nbsp;&nbsp;calories INT<br>
+);<br>
+<br>
+CREATE TABLE Recettes (<br>
+&nbsp;&nbsp;&nbsp;id INT PRIMARY KEY,<br>
+&nbsp;&nbsp;&nbsp;nom VARCHAR(200),<br>
+&nbsp;&nbsp;&nbsp;temps_prep INT,<br>
+&nbsp;&nbsp;&nbsp;difficulte ENUM('facile','moyen','difficile')<br>
+);<br>
+<br>
+CREATE TABLE Recette_Ingredients (<br>
+&nbsp;&nbsp;&nbsp;recette_id INT,<br>
+&nbsp;&nbsp;&nbsp;ingredient_id INT,<br>
+&nbsp;&nbsp;&nbsp;quantite DECIMAL(8,2),<br>
+&nbsp;&nbsp;&nbsp;PRIMARY KEY (recette_id, ingredient_id),<br>
+&nbsp;&nbsp;&nbsp;FOREIGN KEY (recette_id) REFERENCES Recettes(id),<br>
+&nbsp;&nbsp;&nbsp;FOREIGN KEY (ingredient_id) REFERENCES Ingredients(id)<br>
+);
+                            </code>
+                        </div>
+
+                        <h3>Requêtes utiles</h3>
+                        <div class="code-block">
+                            <code>
+-- 1. Recettes avec un ingrédient<br>
+SELECT r.nom FROM Recettes r<br>
+JOIN Recette_Ingredients ri ON r.id = ri.recette_id<br>
+WHERE ri.ingredient_id = 5;<br>
+<br>
+-- 2. Calories totales d'une recette<br>
+SELECT SUM(i.calories * ri.quantite)<br>
+FROM Recette_Ingredients ri<br>
+JOIN Ingredients i ON ri.ingredient_id = i.id<br>
+WHERE ri.recette_id = 1;
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+             
+             
+   
+
+                <!-- Module 3 -->
+                <div id="module3" class="module">
+                    <div class="module-header">
+                        <h2>🧠  9. MERISE - Méthode de Modélisation</h2>
+                        <span class="module-level">Débutant</span>
+                    </div>
+                    <div class="module-content">
+                        <h3>🔹 Qu'est-ce que MERISE ?</h3>
+                        <p>MERISE est une méthode française de modélisation utilisée pour concevoir des bases de données de manière structurée, logique et systématique. Le nom signifie "Méthode d'Étude et de Réalisation Informatique pour les Systèmes d'Entreprise".</p>
+                        
+                        <h4>🎯 Objectifs de MERISE</h4>
+                        <ul class="content-list">
+                            <li><strong>Séparation des préoccupations</strong> : Distinguer le "quoi" (données) du "comment" (technique)</li>
+                            <li><strong>Indépendance technologique</strong> : Concevoir sans se limiter à un SGBD particulier</li>
+                            <li><strong>Communication claire</strong> : Créer des diagrammes compréhensibles pour tous les acteurs</li>
+                            <li><strong>Qualité du design</strong> : Éviter les redondances et les anomalies</li>
+                            <li><strong>Évolutivité</strong> : Faciliter les modifications futures</li>
+                        </ul>
+                        
+                        <h4>📚 Les niveaux d'abstraction MERISE</h4>
+                        <p>MERISE propose une approche progressive du plus abstrait au plus concret :</p>
+                        
+                        <p><strong>Elle repose sur plusieurs modèles, dont les plus importants sont :</strong></p>
+                        <ul class="content-list">
+                            <li><strong>📖 MCD – Modèle Conceptuel de Données</strong> : Représenter les données du point de vue métier sans se soucier de l'informatique</li>
+                            <li><strong>🧩 MLD – Modèle Logique de Données</strong> : Transformer le MCD en tables relationnelles adaptées à un SGBD relationnel</li>
+                            <li><strong>💾 MPD – Modèle Physique de Données</strong> : Implémenter le MLD dans un SGBD spécifique (MySQL, PostgreSQL, Oracle, etc.)</li>
+                            <li><strong>📄 SQL – Langage de manipulation des données</strong> : Interagir concrètement avec la base de données</li>
+                        </ul>
+                        
+                        <h4>🔄 Avantages de la méthode MERISE</h4>
+                        <ul class="content-list">
+                            <li>✅ Clarté : Chaque niveau a un objectif distinct</li>
+                            <li>✅ Réutilisabilité : Le MCD peut servir pour plusieurs SGBD différents</li>
+                            <li>✅ Maintenance : Facile de comprendre et modifier un design existant</li>
+                            <li>✅ Documentation : Les diagrammes servent de documentation à jour</li>
+                            <li>✅ Qualité : Réduit les erreurs et les problèmes futurs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                
+               
+                <!-- Module 7 -->
+                <div id="module7" class="module">
+                    <div class="module-header">
+                        <h2>🔄 10. Lien entre MERISE et SQL</h2>
+                        <span class="module-level">Avancé</span>
+                    </div>
+                    <div class="module-content">
+                        <h4>🔄 La relation entre MERISE et SQL</h4>
+                        <p>MERISE et SQL sont deux outils complémentaires dans le cycle de vie d'une base de données :</p>
+                        
+                        <ul class="content-list">
+                            <li><strong>MERISE</strong> sert à <strong>concevoir et structurer</strong> la base de données de manière optimale. C'est la phase de design où l'on réfléchit à l'organisation logique.</li>
+                            <li><strong>SQL</strong> sert à <strong>exploiter et manipuler</strong> les données une fois qu'elles sont stockées. C'est la phase d'utilisation concrète.</li>
+                            <li><strong>Les deux sont complémentaires</strong> : Un bon design MERISE assure que SQL sera efficace et les données bien structurées.</li>
+                        </ul>
+                        
+                        <h4>🔁 Le cycle de développement</h4>
+                        <p><strong>Le processus typique est :</strong></p>
+                        <ul class="content-list">
+                            <li>1️⃣ <strong>Analyse des besoins</strong> : Comprendre le problème (ex: organiser les greniers)</li>
+                            <li>2️⃣ <strong>Modélisation MERISE</strong> : Créer le MCD (entités IGOUDA, CASE, TENTENA)</li>
+                            <li>3️⃣ <strong>Transformation en MLD</strong> : Créer les tables relationnelles</li>
+                            <li>4️⃣ <strong>Implémentation en SQL</strong> : Créer les tables (CREATE TABLE) avec clés primaires et étrangères</li>
+                            <li>5️⃣ <strong>Remplissage des données</strong> : Insérer les données (INSERT)</li>
+                            <li>6️⃣ <strong>Exploitation et maintenance</strong> : Consulter (SELECT), modifier (UPDATE), supprimer (DELETE)</li>
+                        </ul>
+                        
+                        <h4>💡 Exemple pratique avec les Igoudars</h4>
+                        <p><strong>Avant MERISE :</strong> On saurait juste que "il y a des greniers avec des cases gérées par des gardiens"</p>
+                        <p><strong>Après MERISE :</strong> On saurait précisément :</p>
+                        <ul class="content-list">
+                            <li>Combien d'entités (3 : IGOUDA, CASE, TENTENA)</li>
+                            <li>Quels attributs chacune doit avoir</li>
+                            <li>Comment elles sont reliées (avec les cardinalités)</li>
+                        </ul>
+                        <p><strong>Avec SQL :</strong> On peut créer les structures et manipuler les données de manière précise et efficace</p>
+                        
+                        <h4>✅ Avantages de cette approche</h4>
+                        <ul class="content-list">
+                            <li>✓ <strong>Clarté</strong> : On sait exactement ce qu'on va implémenter</li>
+                            <li>✓ <strong>Flexibilité</strong> : Le MCD peut être implémenté avec n'importe quel SGBD</li>
+                            <li>✓ <strong>Qualité</strong> : Meilleur design = meilleures performances et moins de bugs</li>
+                            <li>✓ <strong>Maintenance</strong> : Facile de comprendre et modifier</li>
+                            <li>✓ <strong>Documentation</strong> : Le diagramme MERISE reste une excellente documentation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Summary Section -->
+                <div class="summary-section">
+                    <h2>🏁 Conclusion</h2>
+                    <div class="summary-content">
+                        <p>L'exemple des Igoudars montre que les principes fondamentaux des bases de données existaient déjà avant l'informatique.</p>
+                        <p>Grâce à MERISE et SQL, ces principes sont aujourd'hui formalisés et utilisés dans les systèmes informatiques modernes.</p>
+                    </div>
+                    
+                    <div class="summary-grid">
+                        <div class="summary-card">
+                            <div class="summary-icon">📘</div>
+                            <h4>Concepts Clés</h4>
+                            <p>Base de données, organisation de données</p>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-icon">🏛️</div>
+                            <h4>Exemple Pratique</h4>
+                            <p>Les Igoudars comme modèle réel</p>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-icon">🧠</div>
+                            <h4>Modélisation</h4>
+                            <p>Méthode MERISE structurée</p>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-icon">📐</div>
+                            <h4>Design (MCD)</h4>
+                            <p>Entités et relations</p>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-icon">🧩</div>
+                            <h4>Implémentation (MLD)</h4>
+                            <p>Tables relationnelles</p>
+                        </div>
+                        <div class="summary-card">
+                            <div class="summary-icon">🗄️</div>
+                            <h4>Manipulation</h4>
+                            <p>Langage SQL</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Download PDF Section -->
+                <div class="download-section">
+                    <h2>📥 Télécharger le cours complet</h2>
+                    <p>Téléchargez le contenu du cours en format PDF pour l'étudier hors ligne.</p>
+                    <button id="downloadPdfBtn" class="btn btn-download-pdf">
+                        📄 Télécharger le PDF du cours
+                    </button>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="cta-section">
+                    <h2>Prêt à tester vos connaissances ?</h2>
+                    <p>Vous avez parcouru tous les modules du cours. Passez maintenant au QCM pour évaluer votre compréhension.</p>
+                    <a href="qcm.html" class="btn btn-qcm">
+                        → Accéder au QCM
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="home-footer">
+        <p>&copy; 2026 LST SITD - COURS BASES DE DONNEES</p>
+    </footer>
+
+    <script src="courses-script.js"></script>
+</body>
+</html>

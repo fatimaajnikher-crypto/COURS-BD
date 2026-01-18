@@ -1,0 +1,950 @@
+/* ========== COURSES PAGE SPECIFIC STYLES ========== */
+
+.courses-header {
+    background: linear-gradient(135deg, rgba(26, 31, 58, 0.9), rgba(15, 52, 96, 0.9));
+    padding: 2rem 2rem;
+    border-bottom: 3px solid var(--neon-cyan);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 0 40px var(--glow-cyan),
+        inset 0 0 40px rgba(0, 240, 255, 0.05);
+}
+
+.back-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    color: var(--neon-pink);
+    border: 2px solid var(--neon-pink);
+    text-decoration: none;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.back-button:hover {
+    color: var(--neon-cyan);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 20px var(--glow-cyan);
+}
+
+.courses-main {
+    padding: 3rem 0;
+}
+
+/* ========== MAIN VIDEO SECTION ========== */
+.main-video-section {
+    margin-bottom: 4rem;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    border: 3px solid var(--neon-cyan);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 
+        0 0 50px var(--glow-cyan),
+        inset 0 0 30px rgba(0, 240, 255, 0.05);
+    animation: float-in 0.8s ease-out;
+}
+
+.video-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+    z-index: 10;
+    animation: shimmer 2s infinite;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ========== COURSE DETAILS SECTION ========== */
+.course-details {
+    background: linear-gradient(135deg, rgba(26, 31, 58, 0.7), rgba(15, 52, 96, 0.7));
+    padding: 3rem;
+    border: 2px solid var(--neon-blue);
+    border-radius: 10px;
+    box-shadow: 
+        0 0 40px var(--glow-blue),
+        inset 0 0 40px rgba(0, 212, 255, 0.05);
+}
+
+/* ========== TABLE OF CONTENTS ========== */
+.toc-section {
+    background: rgba(26, 31, 58, 0.8);
+    padding: 2rem;
+    border: 2px solid var(--neon-pink);
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    box-shadow: 0 0 30px var(--glow-pink);
+}
+
+.toc-section h2 {
+    color: var(--neon-pink);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 15px var(--glow-pink);
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+
+.toc-nav ul {
+    list-style: none;
+}
+
+.toc-nav li {
+    margin-bottom: 0.8rem;
+}
+
+.toc-nav a {
+    color: var(--neon-cyan);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.toc-nav a:hover {
+    color: var(--neon-pink);
+    border-left-color: var(--neon-cyan);
+    box-shadow: 0 0 15px var(--glow-cyan);
+    transform: translateX(10px);
+}
+
+/* ========== MODULES ========== */
+.module {
+    margin-bottom: 3rem;
+    padding: 2.5rem;
+    background: rgba(26, 31, 58, 0.6);
+    border-left: 5px solid var(--neon-cyan);
+    border-radius: 5px;
+    animation: float-in 0.8s ease-out;
+    transition: all 0.4s ease;
+}
+
+.module:hover {
+    border-left-color: var(--neon-pink);
+    box-shadow: 
+        0 0 30px var(--glow-pink),
+        inset 0 0 20px rgba(255, 0, 110, 0.05);
+    transform: translateX(10px);
+}
+
+.module-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--neon-blue);
+}
+
+.module-header h2 {
+    color: var(--neon-cyan);
+    font-size: 1.8rem;
+    margin: 0;
+    text-shadow: 0 0 15px var(--glow-cyan);
+    letter-spacing: 1px;
+}
+
+.module-level {
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, var(--neon-pink), var(--neon-blue));
+    color: white;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.module-content h3 {
+    color: var(--neon-pink);
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px var(--glow-pink);
+}
+
+.module-content h4 {
+    color: var(--neon-blue);
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    text-shadow: 0 0 8px var(--glow-blue);
+}
+
+.module-content p {
+    color: rgba(0, 240, 255, 0.85);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.content-list {
+    list-style: none;
+    padding: 0;
+}
+
+.content-list li {
+    padding: 0.7rem 1rem;
+    margin: 0.5rem 0;
+    color: rgba(0, 240, 255, 0.8);
+    border-left: 3px solid var(--neon-green);
+    background: rgba(57, 255, 20, 0.05);
+    border-radius: 3px;
+    line-height: 1.6;
+}
+
+.content-list strong {
+    color: var(--neon-green);
+    text-shadow: 0 0 8px rgba(57, 255, 20, 0.3);
+}
+
+/* ========== TYPE GRID ========== */
+.type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.type-card {
+    background: rgba(0, 212, 255, 0.1);
+    border: 2px solid var(--neon-blue);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.type-card:hover {
+    background: rgba(0, 212, 255, 0.2);
+    box-shadow: 0 0 25px var(--glow-blue);
+    border-color: var(--neon-cyan);
+    transform: translateY(-5px);
+}
+
+.type-card h5 {
+    color: var(--neon-cyan);
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    text-shadow: 0 0 10px var(--glow-cyan);
+}
+
+.type-card p {
+    color: rgba(0, 240, 255, 0.7);
+}
+
+/* ========== CARDINALITY GRID ========== */
+.cardinality-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.card-item {
+    background: rgba(255, 0, 110, 0.1);
+    border: 2px solid var(--neon-pink);
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.card-item:hover {
+    background: rgba(255, 0, 110, 0.2);
+    box-shadow: 0 0 25px var(--glow-pink);
+    border-color: var(--neon-cyan);
+    transform: translateY(-5px);
+}
+
+.card-item strong {
+    display: block;
+    color: var(--neon-pink);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px var(--glow-pink);
+}
+
+.card-item p {
+    color: rgba(0, 240, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+/* ========== CODE BLOCK ========== */
+.code-block {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid var(--neon-green);
+    border-radius: 5px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+}
+
+.code-block code {
+    color: var(--neon-green);
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
+    letter-spacing: 0.5px;
+}
+
+/* ========== TABLE STYLES ========== */
+.table-wrapper {
+    overflow-x: auto;
+    margin: 2rem 0;
+    border-radius: 8px;
+    border: 3px solid var(--neon-cyan);
+    box-shadow: 
+        0 0 30px var(--glow-cyan),
+        inset 0 0 20px rgba(0, 240, 255, 0.05);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(26, 31, 58, 0.8);
+}
+
+.data-table thead {
+    background: linear-gradient(90deg, 
+        rgba(0, 240, 255, 0.3) 0%, 
+        rgba(0, 212, 255, 0.2) 50%, 
+        rgba(255, 0, 110, 0.2) 100%);
+    border-bottom: 3px solid var(--neon-cyan);
+    position: sticky;
+    top: 0;
+}
+
+.data-table th {
+    padding: 1.2rem 1rem;
+    color: var(--neon-cyan);
+    text-align: left;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 15px var(--glow-cyan);
+    border-right: 2px solid rgba(0, 240, 255, 0.2);
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.data-table th:last-child {
+    border-right: none;
+}
+
+.data-table td {
+    padding: 1rem;
+    color: rgba(0, 240, 255, 0.85);
+    border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+    border-right: 1px solid rgba(0, 212, 255, 0.1);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.data-table td:first-child {
+    font-weight: 700;
+    color: var(--neon-pink);
+    text-shadow: 0 0 10px rgba(255, 0, 110, 0.3);
+}
+
+.data-table td:last-child {
+    border-right: none;
+}
+
+.data-table tbody tr {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background: rgba(0, 212, 255, 0.03);
+}
+
+.data-table tbody tr:hover {
+    background: linear-gradient(90deg, 
+        rgba(0, 240, 255, 0.1) 0%, 
+        rgba(255, 0, 110, 0.05) 100%);
+    box-shadow: 
+        inset 0 0 20px rgba(0, 240, 255, 0.1),
+        0 0 20px var(--glow-cyan);
+    border-left: 4px solid var(--neon-pink);
+}
+
+.data-table tbody tr:hover td:first-child {
+    color: var(--neon-cyan);
+    text-shadow: 0 0 15px var(--glow-cyan);
+}
+
+.data-table tbody tr:last-child td {
+    border-bottom: 2px solid var(--neon-pink);
+}
+
+/* Scrollbar pour table wrapper */
+.table-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+    background: rgba(0, 50, 100, 0.5);
+    border-radius: 10px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--neon-cyan), var(--neon-pink));
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--glow-cyan);
+}
+
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--neon-pink), var(--neon-cyan));
+    box-shadow: 0 0 20px var(--glow-pink);
+}
+
+/* ========== SUMMARY SECTION ========== */
+.summary-section {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 3px solid var(--neon-cyan);
+}
+
+.summary-section h2 {
+    color: var(--neon-cyan);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-shadow: 0 0 20px var(--glow-cyan);
+    letter-spacing: 2px;
+}
+
+.summary-content {
+    background: rgba(0, 212, 255, 0.05);
+    border: 2px solid var(--neon-cyan);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.summary-content p {
+    color: rgba(0, 240, 255, 0.85);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.summary-content p:last-child {
+    margin-bottom: 0;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.summary-card {
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 0, 110, 0.1));
+    border: 2px solid var(--neon-blue);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.4s ease;
+    animation: float-in 0.8s ease-out;
+}
+
+.summary-card:hover {
+    border-color: var(--neon-pink);
+    box-shadow: 
+        0 0 40px var(--glow-pink),
+        inset 0 0 20px rgba(255, 0, 110, 0.1);
+    transform: translateY(-10px);
+}
+
+.summary-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: bounceIn 0.8s ease-out;
+}
+
+.summary-card h4 {
+    color: var(--neon-cyan);
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    text-shadow: 0 0 10px var(--glow-cyan);
+}
+
+.summary-card p {
+    color: rgba(0, 240, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+/* ========== CALL TO ACTION ========== */
+.cta-section {
+    margin-top: 4rem;
+    padding: 3rem;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 0, 110, 0.1));
+    border: 2px solid var(--neon-cyan);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 40px var(--glow-cyan);
+}
+
+.cta-section h2 {
+    color: var(--neon-cyan);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px var(--glow-cyan);
+    letter-spacing: 2px;
+}
+
+.cta-section p {
+    color: rgba(0, 240, 255, 0.8);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* ========== RESPONSIVE STYLES ========== */
+@media (max-width: 768px) {
+    .courses-header {
+        padding: 1.5rem;
+    }
+
+    .main-title {
+        font-size: 2rem;
+        letter-spacing: 3px;
+    }
+
+    .back-button {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .module-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .module-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .course-details {
+        padding: 1.5rem;
+    }
+
+    .module {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .toc-section {
+        padding: 1.5rem;
+    }
+
+    .type-grid,
+    .cardinality-grid,
+    .summary-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .summary-icon {
+        font-size: 2.5rem;
+    }
+
+    .cta-section {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .courses-header {
+        padding: 1rem;
+    }
+
+    .main-title {
+        font-size: 1.4rem;
+    }
+
+    .course-details {
+        padding: 1rem;
+    }
+
+    .module {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        border-left-width: 3px;
+    }
+
+    .module-header h2 {
+        font-size: 1.1rem;
+    }
+
+    .module-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .module-content h4 {
+        font-size: 0.95rem;
+    }
+
+    .toc-nav a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .type-grid,
+    .cardinality-grid,
+    .summary-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .summary-icon {
+        font-size: 2rem;
+    }
+
+    .summary-card h4 {
+        font-size: 1rem;
+    }
+
+    .code-block {
+        padding: 1rem;
+    }
+
+    .code-block code {
+        font-size: 0.85rem;
+    }
+
+    .cta-section {
+        padding: 1.5rem 1rem;
+    }
+
+    .cta-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .back-button {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* ========== DOWNLOAD PDF SECTION ========== */
+.download-section {
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.12), rgba(0, 212, 255, 0.08));
+    border: 2px solid rgba(0, 240, 255, 0.4);
+    border-radius: 15px;
+    padding: 3.5rem;
+    margin: 4rem 0;
+    text-align: center;
+    box-shadow: 
+        0 0 40px rgba(0, 240, 255, 0.15),
+        inset 0 0 40px rgba(0, 240, 255, 0.03),
+        0 10px 40px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    animation: slideInUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animated background effect */
+.download-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: float 20s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(50px, 50px);
+    }
+}
+
+.download-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(0, 240, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: pulse 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.6;
+    }
+}
+
+.download-section h2 {
+    color: var(--neon-cyan);
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 
+        0 0 20px rgba(0, 240, 255, 0.6),
+        0 0 40px rgba(0, 212, 255, 0.3);
+    font-weight: 700;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 2;
+    animation: glowText 3s ease-in-out infinite;
+}
+
+@keyframes glowText {
+    0%, 100% {
+        text-shadow: 
+            0 0 20px rgba(0, 240, 255, 0.6),
+            0 0 40px rgba(0, 212, 255, 0.3);
+    }
+    50% {
+        text-shadow: 
+            0 0 30px rgba(0, 240, 255, 0.8),
+            0 0 60px rgba(0, 212, 255, 0.5);
+    }
+}
+
+.download-section p {
+    color: rgba(0, 240, 255, 0.9);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Button styling */
+.btn-download-pdf {
+    background: linear-gradient(135deg, var(--neon-cyan), #00d4ff, var(--neon-cyan));
+    background-size: 200% 200%;
+    color: #000;
+    padding: 1.3rem 3.5rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    letter-spacing: 1.5px;
+    box-shadow: 
+        0 0 30px rgba(0, 240, 255, 0.5),
+        0 0 60px rgba(0, 212, 255, 0.25),
+        0 5px 25px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+/* Button shine effect */
+.btn-download-pdf::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.btn-download-pdf:hover::before {
+    left: 100%;
+}
+
+.btn-download-pdf:hover {
+    transform: translateY(-4px) scale(1.08);
+    animation: buttonGlow 0.6s ease-out;
+    box-shadow: 
+        0 0 60px rgba(0, 240, 255, 0.8),
+        0 0 100px rgba(0, 212, 255, 0.4),
+        0 15px 40px rgba(0, 0, 0, 0.3),
+        inset 0 0 20px rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, #00d4ff, var(--neon-cyan), #00d4ff);
+    background-position: 200% 200%;
+}
+
+@keyframes buttonGlow {
+    0% {
+        box-shadow: 
+            0 0 20px rgba(0, 240, 255, 0.5),
+            0 0 40px rgba(0, 212, 255, 0.2);
+    }
+    50% {
+        box-shadow: 
+            0 0 80px rgba(0, 240, 255, 0.8),
+            0 0 120px rgba(0, 212, 255, 0.4);
+    }
+    100% {
+        box-shadow: 
+            0 0 60px rgba(0, 240, 255, 0.8),
+            0 0 100px rgba(0, 212, 255, 0.4);
+    }
+}
+
+.btn-download-pdf:active {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 
+        0 0 40px rgba(0, 240, 255, 0.6),
+        0 0 80px rgba(0, 212, 255, 0.3),
+        0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Disabled state for loading */
+.btn-download-pdf:disabled {
+    cursor: not-allowed;
+    animation: loadingBounce 0.6s ease-in-out infinite;
+}
+
+@keyframes loadingBounce {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+/* Success state animation */
+.btn-download-pdf.success {
+    background: linear-gradient(135deg, #39ff14, #00ff88);
+    color: #000;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .download-section {
+        padding: 2.5rem;
+        margin: 3rem 0;
+    }
+
+    .download-section h2 {
+        font-size: 1.9rem;
+        letter-spacing: 1.5px;
+    }
+
+    .download-section p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn-download-pdf {
+        padding: 1.1rem 3rem;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 768px) {
+    .download-section {
+        padding: 2rem 1.5rem;
+        margin: 2.5rem 0;
+        border-radius: 10px;
+    }
+
+    .download-section::after {
+        width: 200px;
+        height: 200px;
+    }
+
+    .download-section h2 {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+        letter-spacing: 1px;
+        text-shadow: 
+            0 0 15px rgba(0, 240, 255, 0.5),
+            0 0 30px rgba(0, 212, 255, 0.2);
+    }
+
+    .download-section p {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+        color: rgba(0, 240, 255, 0.85);
+    }
+
+    .btn-download-pdf {
+        padding: 0.95rem 2.5rem;
+        font-size: 1rem;
+        letter-spacing: 0.8px;
+    }
+
+    .btn-download-pdf:hover {
+        transform: translateY(-3px) scale(1.06);
+    }
+}
+
+@media (max-width: 480px) {
+    .download-section {
+        padding: 1.5rem 1rem;
+        margin: 2rem 0;
+    }
+
+    .download-section h2 {
+        font-size: 1.4rem;
+        letter-spacing: 0.8px;
+    }
+
+    .download-section p {
+        font-size: 0.9rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .btn-download-pdf {
+        padding: 0.85rem 2rem;
+        font-size: 0.95rem;
+        letter-spacing: 0.5px;
+    }
+
+    .btn-download-pdf:hover {
+        transform: translateY(-2px) scale(1.04);
+    }
+}

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCM - MERISE et SQL</title>
+    <link rel="stylesheet" href="qcm-style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>QCM - COURS COMPLET MERISE & SQL</h1>
+            <p>Testez vos connaissances sur le cours complet : modélisation, SQL et techniques avancées</p>
+            <div class="progress-bar">
+                <div class="progress" id="progressBar"></div>
+            </div>
+            <p class="progress-text"><span id="currentQuestion">0</span> / 30 questions</p>
+        </header>
+
+        <main>
+            <form id="qcmForm">
+                <!-- Section 1: Concepts fondamentaux (1-10) -->
+                <section class="question-section">
+                    <h2>🔹 Introduction & Concepts Fondamentaux (Q1-10)</h2>
+
+                    <div class="question" data-question="1">
+                        <h3>1. À l'ère numérique, une base de données est :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q1" value="a"> a) Un fichier Excel centralisé</label>
+                            <label><input type="radio" name="q1" value="b"> b) Une collection organisée et structurée de données</label>
+                            <label><input type="radio" name="q1" value="c"> c) Uniquement un produit Microsoft</label>
+                            <label><input type="radio" name="q1" value="d"> d) Une simple liste de noms</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="2">
+                        <h3>2. Quelle est la différence entre BDD et SGBD ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q2" value="a"> a) Aucune, ce sont les mêmes termes</label>
+                            <label><input type="radio" name="q2" value="b"> b) BDD = les données, SGBD = le logiciel qui les gère</label>
+                            <label><input type="radio" name="q2" value="c"> c) SGBD est plus ancien</label>
+                            <label><input type="radio" name="q2" value="d"> d) BDD n'existe que en anglais</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="3">
+                        <h3>3. Exemple de SGBD populaire et open source :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q3" value="a"> a) Oracle</label>
+                            <label><input type="radio" name="q3" value="b"> b) SQL Server</label>
+                            <label><input type="radio" name="q3" value="c"> c) MySQL/MariaDB</label>
+                            <label><input type="radio" name="q3" value="d"> d) IBM DB2</label>
+                        </div>
+                        <div class="feedback" data-answer="c"></div>
+                    </div>
+
+                    <div class="question" data-question="4">
+                        <h3>4. ACID signifie :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q4" value="a"> a) Accès, Codage, Insertion, Durée</label>
+                            <label><input type="radio" name="q4" value="b"> b) Atomicité, Cohérence, Isolation, Durabilité</label>
+                            <label><input type="radio" name="q4" value="c"> c) Audit, Cache, Index, Données</label>
+                            <label><input type="radio" name="q4" value="d"> d) Architecture, Configuration, Infrastructure, Design</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="5">
+                        <h3>5. L'Atomicité (A dans ACID) garantit :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q5" value="a"> a) Que tout ou rien n'est exécuté</label>
+                            <label><input type="radio" name="q5" value="b"> b) Que les données restent intègres</label>
+                            <label><input type="radio" name="q5" value="c"> c) Que les autres transactions ne voient pas les changements</label>
+                            <label><input type="radio" name="q5" value="d"> d) Que les changements survivent aux pannes</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+
+                    <div class="question" data-question="6">
+                        <h3>6. La Cohérence (C dans ACID) signifie :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q6" value="a"> a) Les données restent intègres et cohérentes après une transaction</label>
+                            <label><input type="radio" name="q6" value="b"> b) Que personne ne peut accéder aux données</label>
+                            <label><input type="radio" name="q6" value="c"> c) Que les transactions s'exécutent ensemble</label>
+                            <label><input type="radio" name="q6" value="d"> d) Que le disque ne peut pas tomber en panne</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+
+                    <div class="question" data-question="7">
+                        <h3>7. L'Isolation (I dans ACID) signifie :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q7" value="a"> a) Les transactions ne s'interfèrent pas entre elles</label>
+                            <label><input type="radio" name="q7" value="b"> b) Personne ne peut voir les données</label>
+                            <label><input type="radio" name="q7" value="c"> c) Les données doivent être sur un disque séparé</label>
+                            <label><input type="radio" name="q7" value="d"> d) Seul l'administrateur y a accès</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+
+                    <div class="question" data-question="8">
+                        <h3>8. La Durabilité (D dans ACID) garantit :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q8" value="a"> a) Que les transactions restent enregistrées</label>
+                            <label><input type="radio" name="q8" value="b"> b) Que les données vivent longtemps</label>
+                            <label><input type="radio" name="q8" value="c"> c) Que personne ne peut modifier les données</label>
+                            <label><input type="radio" name="q8" value="d"> d) Que le serveur ne crash jamais</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+
+                    <div class="question" data-question="9">
+                        <h3>9. La contrainte d'intégrité référentielle signifie :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q9" value="a"> a) Les données ne peuvent pas être modifiées</label>
+                            <label><input type="radio" name="q9" value="b"> b) Une clé étrangère ne doit référencer que des clés primaires existantes</label>
+                            <label><input type="radio" name="q9" value="c"> c) Seuls les administrateurs peuvent les voir</label>
+                            <label><input type="radio" name="q9" value="d"> d) Chaque table doit avoir une clé primaire</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="10">
+                        <h3>10. Quel est le processus MERISE complet ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q10" value="a"> a) MCD → MLD → MPD (Modèle Physique des Données)</label>
+                            <label><input type="radio" name="q10" value="b"> b) Directement SQL</label>
+                            <label><input type="radio" name="q10" value="c"> c) MPD → MLD → MCD</label>
+                            <label><input type="radio" name="q10" value="d"> d) MCD → SQL</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+                </section>
+                <!-- Questions à choix multiples simples (1-10) -->
+                <section class="question-section">
+                    <h2>🔹 Concepts fondamentaux (Questions 1-10)</h2>
+
+                    <div class="question" data-question="1">
+                        <h3>1. Qu'est-ce qu'une base de données ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q1" value="a"> a) Un fichier Excel</label>
+                            <label><input type="radio" name="q1" value="b"> b) Une collection organisée de données structurées</label>
+                            <label><input type="radio" name="q1" value="c"> c) Un logiciel de gestion</label>
+                            <label><input type="radio" name="q1" value="d"> d) Un document Word</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="2">
+                        <h3>2. Quelle est la différence entre BDD et SGBD ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q2" value="a"> a) Aucune différence</label>
+                            <label><input type="radio" name="q2" value="b"> b) BDD = les données, SGBD = le logiciel qui les gère</label>
+                            <label><input type="radio" name="q2" value="c"> c) BDD = le logiciel, SGBD = les données</label>
+                            <label><input type="radio" name="q2" value="d"> d) SGBD est obsolète</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="3">
+                        <h3>3. Quel SGBD est open source et populaire pour le web ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q3" value="a"> a) Oracle</label>
+                            <label><input type="radio" name="q3" value="b"> b) SQL Server</label>
+                            <label><input type="radio" name="q3" value="c"> c) MySQL</label>
+                            <label><input type="radio" name="q3" value="d"> d) DB2</label>
+                        </div>
+                        <div class="feedback" data-answer="c"></div>
+                    </div>
+
+                    <div class="question" data-question="4">
+                        <h3>4. ACID en base de données signifie :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q4" value="a"> a) Automaticité, Cohérence, Isolation, Durabilité</label>
+                            <label><input type="radio" name="q4" value="b"> b) Atomicité, Cohérence, Isolation, Durabilité</label>
+                            <label><input type="radio" name="q4" value="c"> c) Accès, Création, Insertion, Deletion</label>
+                            <label><input type="radio" name="q4" value="d"> d) Archivage, Calcul, Intégrité, Données</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="5">
+                        <h3>5. Qu'est-ce qu'une entité en modélisation ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q5" value="a"> a) Une colonne d'une table</label>
+                            <label><input type="radio" name="q5" value="b"> b) Un objet du monde réel identifiable</label>
+                            <label><input type="radio" name="q5" value="c"> c) Une clé primaire</label>
+                            <label><input type="radio" name="q5" value="d"> d) Un rapport SQL</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="6">
+                        <h3>6. Une clé primaire doit-elle être unique ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q6" value="a"> a) Non, il peut y avoir des doublons</label>
+                            <label><input type="radio" name="q6" value="b"> b) Oui, absolument</label>
+                            <label><input type="radio" name="q6" value="c"> c) Seulement si on le demande</label>
+                            <label><input type="radio" name="q6" value="d"> d) Uniquement dans PostgreSQL</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="7">
+                        <h3>7. Quelle est la cardinalité (0,N) ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q7" value="a"> a) Zéro ou un</label>
+                            <label><input type="radio" name="q7" value="b"> b) Un à plusieurs</label>
+                            <label><input type="radio" name="q7" value="c"> c) Zéro ou plusieurs</label>
+                            <label><input type="radio" name="q7" value="d"> d) Un exactement</label>
+                        </div>
+                        <div class="feedback" data-answer="c"></div>
+                    </div>
+
+                    <div class="question" data-question="8">
+                        <h3>8. Une clé étrangère référence :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q8" value="a"> a) Une autre clé étrangère</label>
+                            <label><input type="radio" name="q8" value="b"> b) Une clé primaire d'une autre table</label>
+                            <label><input type="radio" name="q8" value="c"> c) N'importe quelle colonne</label>
+                            <label><input type="radio" name="q8" value="d"> d) Un fichier externe</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="9">
+                        <h3>9. Pourquoi modéliser avant de coder ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q9" value="a"> a) C'est plus rapide</label>
+                            <label><input type="radio" name="q9" value="b"> b) Pour éviter les anomalies et redondances</label>
+                            <label><input type="radio" name="q9" value="c"> c) Pour impressionner le patron</label>
+                            <label><input type="radio" name="q9" value="d"> d) C'est obligatoire par la loi</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="10">
+                        <h3>10. Quel est le processus MERISE ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q10" value="a"> a) MCD → MLD → MPD</label>
+                            <label><input type="radio" name="q10" value="b"> b) MPD → MLD → MCD</label>
+                            <label><input type="radio" name="q10" value="c"> c) Directement du MCD au SQL</label>
+                            <label><input type="radio" name="q10" value="d"> d) MCD → SQL</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+                </section>
+
+                <!-- Section 2: Modélisation Conceptuelle (11-18) -->
+                <section class="question-section">
+                    <h2>🟢 Modélisation Conceptuelle (Q11-18)</h2>
+
+                    <div class="question" data-question="11">
+                        <h3>11. Une entité en modélisation est :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q11" value="a"> a) Une relation entre deux tables</label>
+                            <label><input type="radio" name="q11" value="b"> b) Un objet du monde réel identifiable et distinguable</label>
+                            <label><input type="radio" name="q11" value="c"> c) Une colonne d'une table</label>
+                            <label><input type="radio" name="q11" value="d"> d) Un index sur une table</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="12">
+                        <h3>12. Une propriété (attribut) dans une entité :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q12" value="a"> a) Est toujours une clé primaire</label>
+                            <label><input type="radio" name="q12" value="b"> b) Décrit une caractéristique de l'entité</label>
+                            <label><input type="radio" name="q12" value="c"> c) Ne peut jamais être NULL</label>
+                            <label><input type="radio" name="q12" value="d"> d) Doit être unique</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="13">
+                        <h3>13. La cardinalité (1,1) signifie :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q13" value="a"> a) Zéro ou un</label>
+                            <label><input type="radio" name="q13" value="b"> b) Exactement un</label>
+                            <label><input type="radio" name="q13" value="c"> c) Un ou plusieurs</label>
+                            <label><input type="radio" name="q13" value="d"> d) Zéro ou plusieurs</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="14">
+                        <h3>14. La cardinalité (0,N) signifie :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q14" value="a"> a) Zéro ou un</label>
+                            <label><input type="radio" name="q14" value="b"> b) Exactement un</label>
+                            <label><input type="radio" name="q14" value="c"> c) Zéro ou plusieurs</label>
+                            <label><input type="radio" name="q14" value="d"> d) Un ou plusieurs</label>
+                        </div>
+                        <div class="feedback" data-answer="c"></div>
+                    </div>
+
+                    <div class="question" data-question="15">
+                        <h3>15. Une association en MCD représente :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q15" value="a"> a) Un nom de table</label>
+                            <label><input type="radio" name="q15" value="b"> b) Une relation entre deux ou plusieurs entités</label>
+                            <label><input type="radio" name="q15" value="c"> c) Une clé primaire</label>
+                            <label><input type="radio" name="q15" value="d"> d) Un index</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="16">
+                        <h3>16. Quelle est la différence entre MCD et MLD ?</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q16" value="a"> a) MCD = entités/associations, MLD = tables/colonnes</label>
+                            <label><input type="radio" name="q16" value="b"> b) Aucune différence</label>
+                            <label><input type="radio" name="q16" value="c"> c) MLD est juste un MCD traduit visuellement</label>
+                            <label><input type="radio" name="q16" value="d"> d) MLD est uniquement pour SQL Server</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+
+                    <div class="question" data-question="17">
+                        <h3>17. Dans le MLD, une association (1,N)-(1,1) devient :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q17" value="a"> a) Une nouvelle table</label>
+                            <label><input type="radio" name="q17" value="b"> b) Une clé étrangère du côté du N</label>
+                            <label><input type="radio" name="q17" value="c"> c) Une table de jointure</label>
+                            <label><input type="radio" name="q17" value="d"> d) Deux clés étrangères</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="18">
+                        <h3>18. Une clé primaire doit :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q18" value="a"> a) Être numérique</label>
+                            <label><input type="radio" name="q18" value="b"> b) Être unique et non-NULL</label>
+                            <label><input type="radio" name="q18" value="c"> c) Être modifiable</label>
+                            <label><input type="radio" name="q18" value="d"> d) Accepter les doublons</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+                </section>
+
+                <!-- Section 3: SQL et CRUD (19-24) -->
+                <section class="question-section">
+                    <h2>🔵 SQL et Manipulation de Données (Q19-24)</h2>
+
+                    <div class="question" data-question="19">
+                        <h3>19. CREATE TABLE est un exemple de :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q19" value="a"> a) LMD (Langage de Manipulation de Données)</label>
+                            <label><input type="radio" name="q19" value="b"> b) LDD (Langage de Définition de Données)</label>
+                            <label><input type="radio" name="q19" value="c"> c) LCD (Langage de Contrôle des Données)</label>
+                            <label><input type="radio" name="q19" value="d"> d) LCT (Langage de Contrôle de Transactions)</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="20">
+                        <h3>20. Le CRUD en base de données signifie :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q20" value="a"> a) Create, Read, Update, Delete</label>
+                            <label><input type="radio" name="q20" value="b"> b) Cache, Recover, Undo, Dump</label>
+                            <label><input type="radio" name="q20" value="c"> c) Create, Restore, Upgrade, Deploy</label>
+                            <label><input type="radio" name="q20" value="d"> d) Compress, Read, Update, Drop</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+
+                    <div class="question" data-question="21">
+                        <h3>21. INSERT ajoute des :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q21" value="a"> a) Tables</label>
+                            <label><input type="radio" name="q21" value="b"> b) Colonnes</label>
+                            <label><input type="radio" name="q21" value="c"> c) Lignes (enregistrements)</label>
+                            <label><input type="radio" name="q21" value="d"> d) Bases de données</label>
+                        </div>
+                        <div class="feedback" data-answer="c"></div>
+                    </div>
+
+                    <div class="question" data-question="22">
+                        <h3>22. WHERE est utilisé pour :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q22" value="a"> a) Trier les résultats</label>
+                            <label><input type="radio" name="q22" value="b"> b) Filtrer les lignes selon une condition</label>
+                            <label><input type="radio" name="q22" value="c"> c) Grouper les données</label>
+                            <label><input type="radio" name="q22" value="d"> d) Joindre deux tables</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="23">
+                        <h3>23. INNER JOIN retourne :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q23" value="a"> a) Seulement les correspondances entre tables</label>
+                            <label><input type="radio" name="q23" value="b"> b) Tous les enregistrements de la gauche</label>
+                            <label><input type="radio" name="q23" value="c"> c) Tous les enregistrements de la droite</label>
+                            <label><input type="radio" name="q23" value="d"> d) Rien si pas de match</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+
+                    <div class="question" data-question="24">
+                        <h3>24. LEFT JOIN inclut :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q24" value="a"> a) Tous les enregistrements de la table de gauche</label>
+                            <label><input type="radio" name="q24" value="b"> b) Tous les enregistrements de la table de droite</label>
+                            <label><input type="radio" name="q24" value="c"> c) Seulement les correspondances</label>
+                            <label><input type="radio" name="q24" value="d"> d) Rien si pas de match</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+                </section>
+
+                <!-- Section 4: Techniques Avancées (25-30) -->
+                <section class="question-section">
+                    <h2>⭐ Techniques Avancées (Q25-30)</h2>
+
+                    <div class="question" data-question="25">
+                        <h3>25. GROUP BY sert à :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q25" value="a"> a) Grouper les données par catégories et appliquer des agrégations</label>
+                            <label><input type="radio" name="q25" value="b"> b) Trier les résultats</label>
+                            <label><input type="radio" name="q25" value="c"> c) Filtrer les lignes</label>
+                            <label><input type="radio" name="q25" value="d"> d) Supprimer les doublons uniquement</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+
+                    <div class="question" data-question="26">
+                        <h3>26. Une sous-requête peut être :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q26" value="a"> a) Seulement dans WHERE</label>
+                            <label><input type="radio" name="q26" value="b"> b) Dans SELECT, FROM, WHERE, HAVING, etc.</label>
+                            <label><input type="radio" name="q26" value="c"> c) Jamais utilisée en SQL</label>
+                            <label><input type="radio" name="q26" value="d"> d) Seulement dans FROM</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="27">
+                        <h3>27. Un INDEX en base de données :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q27" value="a"> a) Augmente la vitesse de recherche</label>
+                            <label><input type="radio" name="q27" value="b"> b) Diminue la taille des données</label>
+                            <label><input type="radio" name="q27" value="c"> c) Garantit l'unicité automatiquement</label>
+                            <label><input type="radio" name="q27" value="d"> d) Crée automatiquement les clés étrangères</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+
+                    <div class="question" data-question="28">
+                        <h3>28. Une VUE (VIEW) en SQL :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q28" value="a"> a) Est une table permanente</label>
+                            <label><input type="radio" name="q28" value="b"> b) Est une requête enregistrée qui agit comme une table virtuelle</label>
+                            <label><input type="radio" name="q28" value="c"> c) Stocke toujours des copies de données</label>
+                            <label><input type="radio" name="q28" value="d"> d) Ne peut jamais être modifiée</label>
+                        </div>
+                        <div class="feedback" data-answer="b"></div>
+                    </div>
+
+                    <div class="question" data-question="29">
+                        <h3>29. Un TRIGGER en base de données :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q29" value="a"> a) Est une procédure stockée exécutée automatiquement sur certains événements</label>
+                            <label><input type="radio" name="q29" value="b"> b) Est un type de clé</label>
+                            <label><input type="radio" name="q29" value="c"> c) Doit être exécuté manuellement</label>
+                            <label><input type="radio" name="q29" value="d"> d) Est un backup automatique</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+
+                    <div class="question" data-question="30">
+                        <h3>30. La normalisation des données en BDD :</h3>
+                        <div class="options">
+                            <label><input type="radio" name="q30" value="a"> a) Élimine la redondance et prévient les anomalies</label>
+                            <label><input type="radio" name="q30" value="b"> b) Rend la base plus grande</label>
+                            <label><input type="radio" name="q30" value="c"> c) Est toujours optionnelle</label>
+                            <label><input type="radio" name="q30" value="d"> d) S'applique seulement aux tables de lookup</label>
+                        </div>
+                        <div class="feedback" data-answer="a"></div>
+                    </div>
+                </section>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-reset" onclick="resetForm()">🔄 Réinitialiser</button>
+                    <button type="submit" class="btn-submit">✓ Corriger</button>
+                </div>
+            </form>
+        </main>
+
+        <!-- Résultats -->
+        <div id="resultsModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeResults()">&times;</span>
+                <h2>Résultats</h2>
+                <div class="results-score">
+                    <div class="score-display">
+                        <span class="score-number" id="scoreNumber">0</span>
+                        <span class="score-percent">%</span>
+                    </div>
+                    <div class="score-text" id="scoreText"></div>
+                </div>
+                <div id="resultsList"></div>
+                <div class="modal-actions">
+                    <button class="btn-primary" onclick="closeResults()">Fermer</button>
+                    <button class="btn-secondary" onclick="resetForm()">Recommencer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="qcm-script.js"></script>
+</body>
+</html>
